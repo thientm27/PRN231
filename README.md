@@ -44,3 +44,27 @@ Link to related resources: https://drive.google.com/drive/folders/1rX59Pl0Mtr61M
 - Http requests pipeline - các cái Middleware
     .UseStaticFile()
     .UseSession()
+    .UseAuthentication()
+    ....................
+
+- Controller -> Class
+    [ApiController ] // to make this class to controller
+    [Route("api/[controller ]") ] // Điều phối 
+    class XXXController : ControllerBase { // http://localhost:5000/api/XXXName
+        // Action Method
+        [HttpVerbs: HttpGet, HttpPost, HttpPost,...] // Anottation attributes for swagger 
+        KiểuReturn MethodName(DanhSáchParameter)
+    }
+- ControllerBase vs Controller:
+    ControllerBase:
+
+- Action Method -> Method (HTTP Verbs: POST/PUT/DELETE/GET/...)
+
+Client                               ASP.NET Core WebAPI (Local Kestrel)
+- Swagger       | --------------> |
+- PostMan       | --------------> |
+- WPF           | --------------> |
+- MobileApp     | --------------> |
+- RazorPages    | --------------> |
+                    Middleware
+                    
