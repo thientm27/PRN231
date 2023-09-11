@@ -1,0 +1,8 @@
+- Tạo khung cho việc thực hiện và quản lý 2 file scirpt database 
+- ProductManaegment (MyStore database - Có 3 bảng: AccountMembet, Products, Categories)
+- FUFlowerBouquetManagementV4
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.17/6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.Desgin --version 5.0.17/6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.17/6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.CodeGeneration --version 5.0.17/6.0.21

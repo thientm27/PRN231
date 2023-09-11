@@ -67,4 +67,10 @@ Client                               ASP.NET Core WebAPI (Local Kestrel)
 - MobileApp     | --------------> |
 - RazorPages    | --------------> |
                     Middleware
-                    
+
+
+- Client App 
+    .GetAsync()
+    .PostAsync()
+    .PutAsync()
+    .DeleteAsync()
