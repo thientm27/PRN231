@@ -38,3 +38,9 @@ Link to related resources: https://drive.google.com/drive/folders/1rX59Pl0Mtr61M
     Request --> Proxy server --> Local Server --> (Binding, Validation) --> Xử lý --> Response
 
 - Server Container (IoC - Inversion of control) - Dependency Injection - ServiceCollection
+    .AddControllerWithVier()
+    .AddSession()
+    .............
+- Http requests pipeline - các cái Middleware
+    .UseStaticFile()
+    .UseSession()
