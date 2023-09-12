@@ -5,4 +5,4 @@
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.17/6.0.21
 dotnet add package Microsoft.EntityFrameworkCore.Desgin --version 5.0.17/6.0.21
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.17/6.0.21
-dotnet add package Microsoft.EntityFrameworkCore.CodeGeneration --version 5.0.17/6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.CodeGeneration --version 5.0.2/6.0.0
