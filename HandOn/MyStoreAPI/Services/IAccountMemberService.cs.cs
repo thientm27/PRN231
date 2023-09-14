@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClubMemberShip.Service;
+using Repository.Models;
+
 
 namespace Services
 {
-    internal interface IAccountMemberService
+    public interface IAccountMemberService : IGenericService<AccountMember>
     {
     }
 }
