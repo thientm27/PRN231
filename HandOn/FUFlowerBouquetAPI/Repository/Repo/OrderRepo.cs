@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repo
 {
-    internal class OrderRepo : GenericRepo<OrderDetail>
+    public class OrderRepo : GenericRepo<OrderDetail>
     {
         public OrderRepo(FUFlowerBouquetManagementV4Context context) : base(context)
         {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Repository.Models
+﻿namespace Repository.Models
 {
     public partial class OrderDetail
     {
@@ -12,6 +9,6 @@ namespace Repository.Models
         public double Discount { get; set; }
 
         public virtual FlowerBouquet FlowerBouquet { get; set; } = null!;
-        public virtual OrderDetail Order { get; set; } = null!;
+        public virtual Order Order { get; set; } = null!;
     }
 }

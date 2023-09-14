@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace Repository.Models
@@ -20,7 +17,7 @@ namespace Repository.Models
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Customer> Customers { get; set; } = null!;
         public virtual DbSet<FlowerBouquet> FlowerBouquets { get; set; } = null!;
-        public virtual DbSet<OrderDetail> Orders { get; set; } = null!;
+        public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
 
@@ -28,7 +25,7 @@ namespace Repository.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-              optionsBuilder.UseSqlServer(GetConnectionString());
+                optionsBuilder.UseSqlServer(GetConnectionString());
             }
         }
         private string GetConnectionString()
@@ -128,7 +125,7 @@ namespace Repository.Models
                     .HasConstraintName("FK__FlowerBou__Suppl__4316F928");
             });
 
-            modelBuilder.Entity<OrderDetail>(entity =>
+            modelBuilder.Entity<Order>(entity =>
             {
                 entity.ToTable("Order");
 

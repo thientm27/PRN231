@@ -6,7 +6,7 @@ namespace Repository.Repo
 {
     public class SupplierRepo : GenericRepo<Supplier>
     {
-        public Supplier(FUFlowerBouquetManagementV4Context context) : base(context)
+        public SupplierRepo(FUFlowerBouquetManagementV4Context context) : base(context)
         {
         }
     }

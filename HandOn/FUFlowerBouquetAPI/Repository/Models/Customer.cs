@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Repository.Models
+﻿namespace Repository.Models
 {
     public partial class Customer
     {
         public Customer()
         {
-            Orders = new HashSet<OrderDetail>();
+            Orders = new HashSet<Order>();
         }
 
         public int CustomerId { get; set; }
@@ -19,6 +16,6 @@ namespace Repository.Models
         public DateTime? Birthday { get; set; }
         public byte? CustomerStatus { get; set; }
 
-        public virtual ICollection<OrderDetail> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

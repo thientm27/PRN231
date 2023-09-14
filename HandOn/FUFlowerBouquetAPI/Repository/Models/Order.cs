@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Repository.Models
+﻿namespace Repository.Models
 {
-    public partial class OrderDetail
+    public partial class Order
     {
-        public OrderDetail()
+        public Order()
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
