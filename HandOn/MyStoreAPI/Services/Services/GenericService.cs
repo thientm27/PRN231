@@ -6,7 +6,11 @@ namespace ClubMemberShip.Service.Service;
 
 public abstract class GenericService<TEntity> : IGenericService<TEntity> where TEntity : class
 {
-    protected readonly UnitOfWork UnitOfWork;
+    protected readonly UnitOfWork UnitOfWork = new();
+    public GenericService()
+    {
+
+    }
 
     protected GenericService(UnitOfWork unitOfWork)
     {

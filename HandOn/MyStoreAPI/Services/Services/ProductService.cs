@@ -10,8 +10,12 @@ using System.Threading.Tasks;
 
 namespace Services.Services
 {
-    internal class ProductService : GenericService<Product>, IProductService
+    public class ProductService : GenericService<Product>, IProductService
     {
+        public ProductService()
+        {
+        }
+
         public ProductService(UnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
