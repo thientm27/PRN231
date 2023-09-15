@@ -57,16 +57,3 @@ public class ProductsControllers : ControllerBase
         return NoContent();
     }
 }
-
-[Route("api/pro")]
-[ApiController]
-public class ProControllers : ControllerBase
-{
-    private IProductRepository repository = new ProductRepository();
-
-    [HttpGet("get-product-by-id/{id}/detail")]
-    public ActionResult<Product> GetPById(int id)
-    {
-        return repository.GetProductById(id);
-    }
-}
