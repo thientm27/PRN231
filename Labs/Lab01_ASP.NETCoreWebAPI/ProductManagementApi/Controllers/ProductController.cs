@@ -20,7 +20,7 @@ public class ProductController : ControllerBase
     public IActionResult PostProduct(Products p)
     {
          _productRepository.SaveProduct(p);
-         return Ok();
+         return NotFound();
     }
     
     [HttpDelete("id")]
@@ -32,7 +32,7 @@ public class ProductController : ControllerBase
             return NotFound();
         }
         _productRepository.DeleteProduct(product);
-        return Ok();
+        return NotFound();
     }
       
     [HttpPut("id")]
@@ -44,6 +44,6 @@ public class ProductController : ControllerBase
             return NotFound();
         }
         _productRepository.UpdateProduct(p);
-        return Ok();
+        return NotFound();
     }
 }
