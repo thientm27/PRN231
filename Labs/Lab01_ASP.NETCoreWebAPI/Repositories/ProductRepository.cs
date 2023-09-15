@@ -10,37 +10,37 @@ namespace Repositories
 {
     public class ProductRepository : IProductRepository
     {
-
         ProductRepo productRepo = new(new MyDbContext());
         CategoryRepo categoryRepo = new(new MyDbContext());
+
         public void DeleteProduct(Products p)
         {
             productRepo.Delete(p);
-}
+        }
 
         public List<Category> GetCategories()
         {
-        return categoryRepo.Get();
+            return categoryRepo.Get();
         }
 
         public List<Products> GetProducts()
         {
-            throw new NotImplementedException();
+            return productRepo.Get();
         }
 
         public Products GetProductsById(int id)
         {
-            throw new NotImplementedException();
+            return productRepo.GetByID(id);
         }
 
         public void SaveProduct(Products p)
         {
-            throw new NotImplementedException();
+             productRepo.Create(p);
         }
 
         public void UpdateProduct(Products p)
         {
-            throw new NotImplementedException();
+            productRepo.Update(p);
         }
     }
 }
