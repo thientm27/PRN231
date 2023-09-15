@@ -11,7 +11,7 @@ namespace BusinessObjects
     public class Products
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int ProductId { get; set; }
 
         [Required]
         [StringLength(40)]
@@ -23,6 +23,6 @@ namespace BusinessObjects
         [Required]
         public decimal UnitPrice { get; set; }
         
-        public virtual Category Category { get; set; }
+        public virtual Category? Category { get; set; }
     }
 }

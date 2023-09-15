@@ -12,7 +12,7 @@ namespace BusinessObjects
     public class Category
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int CategoryId { get; set; }
 
         [Required]
         [StringLength(40)]

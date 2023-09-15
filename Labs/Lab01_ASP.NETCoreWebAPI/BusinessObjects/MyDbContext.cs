@@ -36,14 +36,14 @@ namespace BusinessObjects
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, CategoryName = "Beverages" },
-                new Category { Id = 2, CategoryName = "Condiments" },
-                new Category { Id = 3, CategoryName = "Confections" },
-                new Category { Id = 4, CategoryName = "Dairy Products" },
-                new Category { Id = 5, CategoryName = "Grains/Cereals" },
-                new Category { Id = 6, CategoryName = "Meat/Poultry" },
-                new Category { Id = 7, CategoryName = "Produce" },
-                new Category { Id = 8, CategoryName = "Seafood" }
+                new Category { CategoryId = 1, CategoryName = "Beverages" },
+                new Category { CategoryId = 2, CategoryName = "Condiments" },
+                new Category { CategoryId = 3, CategoryName = "Confections" },
+                new Category { CategoryId = 4, CategoryName = "Dairy Products" },
+                new Category { CategoryId = 5, CategoryName = "Grains/Cereals" },
+                new Category { CategoryId = 6, CategoryName = "Meat/Poultry" },
+                new Category { CategoryId = 7, CategoryName = "Produce" },
+                new Category { CategoryId = 8, CategoryName = "Seafood" }
    
                 );
         }
