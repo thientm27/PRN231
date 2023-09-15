@@ -31,7 +31,7 @@ namespace BusinessObjects
         }
 
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

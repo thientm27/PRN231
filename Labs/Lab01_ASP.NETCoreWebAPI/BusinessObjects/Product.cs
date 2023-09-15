@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObjects
 {
-    public class Products
+    public class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductId { get; set; }

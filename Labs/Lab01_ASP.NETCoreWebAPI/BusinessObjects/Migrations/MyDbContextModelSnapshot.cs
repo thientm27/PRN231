@@ -23,71 +23,71 @@ namespace BusinessObjects.Migrations
 
             modelBuilder.Entity("BusinessObjects.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            CategoryId = 1,
                             CategoryName = "Beverages"
                         },
                         new
                         {
-                            Id = 2,
+                            CategoryId = 2,
                             CategoryName = "Condiments"
                         },
                         new
                         {
-                            Id = 3,
+                            CategoryId = 3,
                             CategoryName = "Confections"
                         },
                         new
                         {
-                            Id = 4,
+                            CategoryId = 4,
                             CategoryName = "Dairy Products"
                         },
                         new
                         {
-                            Id = 5,
+                            CategoryId = 5,
                             CategoryName = "Grains/Cereals"
                         },
                         new
                         {
-                            Id = 6,
+                            CategoryId = 6,
                             CategoryName = "Meat/Poultry"
                         },
                         new
                         {
-                            Id = 7,
+                            CategoryId = 7,
                             CategoryName = "Produce"
                         },
                         new
                         {
-                            Id = 8,
+                            CategoryId = 8,
                             CategoryName = "Seafood"
                         });
                 });
 
-            modelBuilder.Entity("BusinessObjects.Products", b =>
+            modelBuilder.Entity("BusinessObjects.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -103,14 +103,14 @@ namespace BusinessObjects.Migrations
                     b.Property<int>("UnitsInStock")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("BusinessObjects.Products", b =>
+            modelBuilder.Entity("BusinessObjects.Product", b =>
                 {
                     b.HasOne("BusinessObjects.Category", "Category")
                         .WithMany("Products")

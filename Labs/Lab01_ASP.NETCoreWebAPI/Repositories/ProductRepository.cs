@@ -10,37 +10,16 @@ namespace Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        ProductRepo productRepo = new(new MyDbContext());
-        CategoryRepo categoryRepo = new(new MyDbContext());
+        public void DeleteProduct(Product p) => ProductDAO.DeleteProduct(p);
 
-        public void DeleteProduct(Products p)
-        {
-            productRepo.Delete(p);
-        }
+        public List<Category> GetCategories() => CategoryDAO.GetCategories();
 
-        public List<Category> GetCategories()
-        {
-            return categoryRepo.Get();
-        }
+        public Product GetProductById(int id) => ProductDAO.FindProductById(id);
 
-        public List<Products> GetProducts()
-        {
-            return productRepo.Get();
-        }
+        public List<Product> GetProducts() => ProductDAO.GetProducts();
 
-        public Products GetProductsById(int id)
-        {
-            return productRepo.GetByID(id);
-        }
+        public void SaveProduct(Product p) => ProductDAO.SaveProduct(p);
 
-        public void SaveProduct(Products p)
-        {
-             productRepo.Create(p);
-        }
-
-        public void UpdateProduct(Products p)
-        {
-            productRepo.Update(p);
-        }
+        public void UpdateProduct(Product p) => ProductDAO.UpdateProduct(p);
     }
 }

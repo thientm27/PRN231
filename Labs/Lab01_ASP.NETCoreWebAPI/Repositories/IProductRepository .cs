@@ -9,11 +9,11 @@ namespace Repositories
 {
     public interface IProductRepository
     {
-        void SaveProduct(Products p);
-        Products GetProductsById(int id);
-        void DeleteProduct(Products p);
-        void UpdateProduct(Products p);
+        void SaveProduct(Product p);
+        Product GetProductById(int id);
+        void DeleteProduct(Product p);
+        void UpdateProduct(Product p);
         List<Category> GetCategories();
-        List<Products> GetProducts();
+        List<Product> GetProducts();
     }
 }
