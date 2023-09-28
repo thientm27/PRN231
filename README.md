@@ -74,3 +74,31 @@ Client                               ASP.NET Core WebAPI (Local Kestrel)
     .PostAsync()
     .PutAsync()
     .DeleteAsync()
+
+
+- Restful API (Data Centric)
+	- ASP.NET Core Web API
+- OData - Version4
+- Odata for .NET: Microsoft.AspNetCore.OData 8.xx.xx
+
+-Build Restful API using ASP.NET Core Web API with ODAta
+	Container...
+	Http request...
+	Controller/Action method
+
+- How to query data from ASP.NET Core Web API with ODataa
+Odata = REST + DataModel + Convention + Format
+Datamodel
+	EntitySet
+	EntityTpye
+
+Step1: ASP.NET Core Web API
+Step2: Odata NuGet Package
+Step3: Entity Data Model
+	IEdmModel GetDataMode(){//Lab2 Code}
+Step4: Container ()
+	.AddOData(options => ...).AddRouteComponents("odata", GetDataMode())
+Step5: Controllers/Action Methods [EnableQuery], Kes thừ Odata thoai vì odata đã kế thừa sẵn controllerBase
+
+
+Uri truy vấn: http://
