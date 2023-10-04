@@ -28,7 +28,7 @@ builder.Services.AddDbContext<BookStoreContext>(options =>
 builder.Services.AddControllers().AddOData(o => o.Select().Filter()
             .Count().OrderBy().Expand().SetMaxTop(100)
             .AddRouteComponents("odata", GetEdmModel()));
-
+builder.Services.AddRouting();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -58,6 +58,7 @@ app.Use((context, next) =>
 });
 
 app.UseAuthorization();
+app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     //endpoints.MapODataRoute("odata", "odata", GetEdmModel());
