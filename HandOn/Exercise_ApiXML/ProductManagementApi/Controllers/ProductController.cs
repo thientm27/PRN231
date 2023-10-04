@@ -22,6 +22,7 @@ public class ProductsControllers : ControllerBase
     public ActionResult<IEnumerable<Category>> GetCategories() => repository.GetCategories();
 
     [HttpGet("id")]
+    [Produces("application/xml")]
     public ActionResult<Product> GetProductById(int id) => repository.GetProductById(id);
 
     [HttpPost]
