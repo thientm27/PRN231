@@ -1,0 +1,51 @@
+﻿@model IEnumerable<BookStore.ODataApi.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Book List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+    @ViewBag.StringJSON
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ISBN)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new{})
+                    @Html.ActionLink("Details", "Details", new{})
+                    @Html.ActionLink("Delete", "Delete", new{})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
