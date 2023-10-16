@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IdetityAjax.BOs
+namespace BusinessObjects.Dtos
 {
-    public class Category
+    public class CategoryDto
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
@@ -11,7 +11,5 @@ namespace IdetityAjax.BOs
         [Required]
         [StringLength(40)]
         public string CategoryName { get; set; }
-
-        public virtual ICollection<Product>? Products { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IdetityAjax.BOs
+namespace BusinessObjects.Dtos
 {
-    public class Product
+    public class ProductDto
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ProductId { get; set; }
+
+        public int? ProductId { get; set; }
 
         [Required]
         [StringLength(40)]
@@ -21,7 +21,6 @@ namespace IdetityAjax.BOs
         [Required]
         public decimal UnitPrice { get; set; }
 
-        public virtual Category? Category { get; set; }
-
+        public CategoryDto? Category { get; set; }
     }
 }

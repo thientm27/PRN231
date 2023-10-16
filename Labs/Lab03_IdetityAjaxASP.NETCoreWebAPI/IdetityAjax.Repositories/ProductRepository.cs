@@ -32,7 +32,8 @@ namespace IdetityAjax.Repositories
         }
         public List<Product> GetProducts()
         {
-            return ProductDAO.GetProducts();
+            var reslut = ProductDAO.GetProducts();
+            return reslut;
         }
     }
 }

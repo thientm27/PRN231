@@ -1,0 +1,74 @@
+﻿@model IEnumerable<IdetityAjax.BOs.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<p class="text-danger">@TempData["msg"]</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ProductId
+            </th>
+            <th>
+                ProductName
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                UnitPrice
+            </th>
+            <th>
+                UnitsInStock
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("abc");
+        $.ajax({
+            url: "https://localhost:7183/api/Products",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                $.each(result, function (i, product) {
+                    var newRow = `<tr>
+                        <td>
+                                ${product.productId}
+                        </td>
+                        <td>
+                                ${product.productName}
+                        </td>
+                        <td>
+                                ${product.category.categoryName}
+                        </td>
+                        <td>
+                                ${product.unitPrice}
+                        </td>
+                        <td>
+                                ${product.unitsInStock}
+                         <td>
+                                <a href="@Url.Content("~/Product/Details?id=${product.productId}")">Details </a> | <a href="@Url.Content("~/Product/Delete?id=${product.productId}")"> Delete</a>
+                        </td>
+                    </tr>`;
+                    $("table tbody").append(newRow);
+                });
+            },
+            error: function (xhr, statua, error) {
+                console.log(xhr)
+            }
+        });
+    });
+</script>

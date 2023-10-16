@@ -1,4 +1,6 @@
-﻿using IdetityAjax.BOs;
+﻿using AutoMapper;
+using BusinessObjects.Dtos;
+using IdetityAjax.BOs;
 using IdetityAjax.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,14 +14,22 @@ namespace IdetityAjax.Api.Controllers
         private IProductRepository repo = new ProductRepository();
 
 
+        private readonly IMapper _mapper;
+
+        public ProductsController(IMapper mapper)
+        {
+            _mapper = mapper;
+        }
+
         //Get: api/Products
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> GetProducts() => (repo.GetProducts());
+        public List<ProductDto> GetProducts() => _mapper.Map<List<ProductDto>>(repo.GetProducts());
+
 
 
         //Post :ProductsController/Products
         [HttpPost]
-        public IActionResult PostProduct([FromBody] Product product)
+        public IActionResult PostProduct( Product product)
         {
            
             repo.SaveProduct(product);
@@ -42,7 +52,7 @@ namespace IdetityAjax.Api.Controllers
 
         //Get: ProductsController/Delete/5
         [HttpPut("id")]
-        public IActionResult UpdateProduct(int id, [FromBody] Product product)
+        public IActionResult UpdateProduct(int id, Product product)
         {
             var p = repo.GetProductById(id);
             if (p == null)
