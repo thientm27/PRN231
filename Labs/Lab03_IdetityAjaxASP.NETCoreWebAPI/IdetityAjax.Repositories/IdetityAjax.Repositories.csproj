@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IdetityAjax.BOs\IdetityAjax.BOs.csproj" />
+    <ProjectReference Include="..\IdetityAjax.DataAccess\IdetityAjax.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

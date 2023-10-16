@@ -10,8 +10,6 @@ namespace IdetityAjax.Api.Controllers
     {
         private IProductRepository repo = new ProductRepository();
 
-
-
         [HttpGet]
         public ActionResult<IEnumerable<Category>> GetProducts() => (repo.GetCategories());
     }
