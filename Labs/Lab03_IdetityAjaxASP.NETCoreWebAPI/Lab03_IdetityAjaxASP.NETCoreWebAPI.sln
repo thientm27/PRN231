@@ -3,7 +3,43 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdetityAjax.BOs", "IdetityAjax.BOs\IdetityAjax.BOs.csproj", "{409379D4-C81E-4464-9558-AE60685B8A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdetityAjax.DataAccess", "IdetityAjax.DataAccess\IdetityAjax.DataAccess.csproj", "{5479C813-3CF9-4CBE-AB71-362E58737B6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdetityAjax.Repositories", "IdetityAjax.Repositories\IdetityAjax.Repositories.csproj", "{8025B0CD-528F-4C5C-8FAD-72EA996DA98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdetityAjax.Api", "IdetityAjax.Api\IdetityAjax.Api.csproj", "{C288B8BA-E117-4A9B-813F-3D1D1408A940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdetityAjax.Client", "IdetityAjax.Client\IdetityAjax.Client.csproj", "{C0BD309C-E664-49D4-BBC9-6F74D2A606F7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{409379D4-C81E-4464-9558-AE60685B8A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409379D4-C81E-4464-9558-AE60685B8A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409379D4-C81E-4464-9558-AE60685B8A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409379D4-C81E-4464-9558-AE60685B8A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5479C813-3CF9-4CBE-AB71-362E58737B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5479C813-3CF9-4CBE-AB71-362E58737B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5479C813-3CF9-4CBE-AB71-362E58737B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5479C813-3CF9-4CBE-AB71-362E58737B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8025B0CD-528F-4C5C-8FAD-72EA996DA98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8025B0CD-528F-4C5C-8FAD-72EA996DA98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8025B0CD-528F-4C5C-8FAD-72EA996DA98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8025B0CD-528F-4C5C-8FAD-72EA996DA98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C288B8BA-E117-4A9B-813F-3D1D1408A940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C288B8BA-E117-4A9B-813F-3D1D1408A940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C288B8BA-E117-4A9B-813F-3D1D1408A940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C288B8BA-E117-4A9B-813F-3D1D1408A940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BD309C-E664-49D4-BBC9-6F74D2A606F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BD309C-E664-49D4-BBC9-6F74D2A606F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BD309C-E664-49D4-BBC9-6F74D2A606F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BD309C-E664-49D4-BBC9-6F74D2A606F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
